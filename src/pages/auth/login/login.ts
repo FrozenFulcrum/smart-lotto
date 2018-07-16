@@ -6,6 +6,7 @@ import { IonicPage } from 'ionic-angular/umd';
     selector: 'login-page',
     template: `
         <h3>Login Page</h3>
+        <login-form></login-form>
     `
 })
 export class LoginPage {
