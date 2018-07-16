@@ -12,9 +12,18 @@ import { IonicPage } from 'ionic-angular/umd';
     </ion-header>
 
     <ion-content>
-        <registration-form></registration-form>
+      <registration-form>
+        <button ion-button type="submit">
+            Create account
+          </button>
+          <div class="error" *ngIf="error">
+            {{ error }}
+          </div>
+      </registration-form>
     </ion-content>
     `
 })
 export class RegisterPage {
+
+  error = undefined;
 }
