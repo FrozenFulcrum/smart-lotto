@@ -5,8 +5,15 @@ import { IonicPage } from 'ionic-angular/umd';
 @Component({
     selector: 'login-page',
     template: `
-        <h3>Login Page</h3>
-        <login-form></login-form>
+    <ion-header>
+      <ion-navbar>
+        <ion-title>Login</ion-title>
+      </ion-navbar>
+    </ion-header>
+
+    <ion-content>
+      <login-form></login-form>
+    </ion-content>
     `
 })
 export class LoginPage {
