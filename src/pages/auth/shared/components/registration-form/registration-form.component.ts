@@ -14,16 +14,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 								type="email">
 						</label>
 						<label>
-							First Name
+							Password
 							<input
-								formControlName="firstName" 
-								type="text">
-						</label>
-						<label>
-							Last Name
-							<input 
-								formControlName="lastName"
-								type="text">
+								formControlName="password" 
+								type="password">
 						</label>
 					</div>
 					<ng-content select="button"></ng-content>
@@ -36,8 +30,7 @@ export class RegistrationFormComponent {
 
     form: FormGroup = this.fb.group({
 				email: ['', Validators.required],
-				firstName: '',
-				lastName: ''
+				password: ''
     });
 
     constructor(private fb: FormBuilder) {}

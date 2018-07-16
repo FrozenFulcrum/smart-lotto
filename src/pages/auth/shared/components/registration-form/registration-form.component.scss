@@ -3,7 +3,6 @@
   box-shadow: 0 3px 4px rgba(0,0,0,.1);
   border-radius: 3px;
   border: 1px solid #c1cedb;
-  width: 400px;
   margin: 50px auto;
   padding: 30px;
   &__action {
@@ -19,6 +18,9 @@
   label {
     display: block;
     margin: 0;
+  }
+  button {
+    width: 100%;
   }
   input {
     outline: 0;

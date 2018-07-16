@@ -14,16 +14,16 @@ import { IonicPage } from 'ionic-angular/umd';
     <ion-content>
       <registration-form>
         <button ion-button type="submit">
-            Create account
-          </button>
-          <div class="error" *ngIf="error">
-            {{ error }}
-          </div>
+          Sign up
+        </button>
+        <div class="error" *ngIf="error">
+          {{ error }}
+        </div>
       </registration-form>
     </ion-content>
     `
 })
 export class RegisterPage {
 
-  error = undefined;
+  error = 'The error is defined!';
 }
