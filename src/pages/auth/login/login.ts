@@ -9,7 +9,7 @@ import { AuthService } from '../shared/services/auth/auth.service';
     selector: 'login-page',
     template: `
     <ion-header>
-	    <ion-navbar>
+	    <ion-navbar hideBackButton="true">
 	      <ion-title>Login</ion-title>
 	    </ion-navbar>
   	</ion-header>
