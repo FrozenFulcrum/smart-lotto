@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage } from 'ionic-angular/umd';
+import { IonicPage, NavController } from 'ionic-angular';
+
+
+import { AuthService } from '../shared/services/auth/auth.service';
 
 @IonicPage()
 @Component({
@@ -11,7 +14,8 @@ import { IonicPage } from 'ionic-angular/umd';
 	    </ion-navbar>
   	</ion-header>
 	  <ion-content>
-	    <auth-form>
+			<auth-form
+				(submitted)="onLogin($event)">
 	      <button ion-button type="submit">
 	        Sign in
 	      </button>
@@ -24,4 +28,12 @@ import { IonicPage } from 'ionic-angular/umd';
     `
 })
 export class LoginPage {
+
+	constructor(private authService: AuthService,
+		public navCtrl: NavController
+	){}
+
+	onLogin(event) {
+		console.log('Login ', event);
+	}
 }

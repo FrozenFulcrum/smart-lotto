@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage } from 'ionic-angular/umd';
+import { IonicPage, NavController } from 'ionic-angular';
+
+import { AuthService } from '../shared/services/auth/auth.service';
 
 @IonicPage()
 @Component({
@@ -11,7 +13,8 @@ import { IonicPage } from 'ionic-angular/umd';
 	    </ion-navbar>
   	</ion-header>
 	  <ion-content>
-	    <auth-form>
+			<auth-form
+				(submitted)="onRegister($event)">
 	      <button ion-button type="submit">
 	        Sign up
 	      </button>
@@ -25,5 +28,15 @@ import { IonicPage } from 'ionic-angular/umd';
 })
 export class RegisterPage {
 
-  error = 'The error is defined!';
+	error = 'The error is defined!';
+	
+	constructor(
+		private authService: AuthService,
+		public navCtrl: NavController
+	){}
+
+	onRegister(event) {
+		console.log('Register event ', event);
+	}
+
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -27,10 +27,21 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
     `
 })
 export class AuthFormComponent {
+
+	@Output()
+	submitted = new EventEmitter<FormGroup>();
+
 	form: FormGroup = this.fb.group({
 		email: ['', Validators.required],
 		password: ''
 	});
 
-constructor(private fb: FormBuilder) {}
+	constructor(private fb: FormBuilder) {}
+
+	onSubmit() {
+		if (this.form.valid) {
+			this.submitted.emit(this.form);
+		}
+	}
+
 }
