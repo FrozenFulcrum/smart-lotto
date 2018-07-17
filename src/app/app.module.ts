@@ -7,6 +7,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { HttpModule } from '@angular/http';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+// import { AngularFireAuth } from 'angularfire2/auth';
 
 import { MyApp } from './app.component';
 import { SharedModule } from '../pages/auth/shared/shared.module';
@@ -29,7 +31,8 @@ var firebaseConfig = {
     SharedModule.forRoot(),
     IonicModule.forRoot(MyApp),
     AngularFireDatabaseModule,
-		AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(firebaseConfig),              
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
