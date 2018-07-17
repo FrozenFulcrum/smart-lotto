@@ -21,6 +21,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 					</label>
 				</div>
 				<ng-content select="button"></ng-content>
+				<ng-content select="p"></ng-content>
 			</form>
 		</div>
     `

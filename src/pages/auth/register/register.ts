@@ -17,7 +17,8 @@ import { IonicPage } from 'ionic-angular/umd';
 	      </button>
 				<div class="error" *ngIf="error">
 					{{ error }}
-				</div>
+        </div>
+        <p>Already have an account?</p>
 			</auth-form>
 		</ion-content>
     `
