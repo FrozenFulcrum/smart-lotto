@@ -6,21 +6,20 @@ import { IonicPage } from 'ionic-angular/umd';
     selector: 'register-page',
     template: `
     <ion-header>
-      <ion-navbar>
-        <ion-title>Register</ion-title>
-      </ion-navbar>
-    </ion-header>
-
-    <ion-content>
-      <registration-form>
-        <button ion-button type="submit">
-          Sign up
-        </button>
-        <div class="error" *ngIf="error">
-          {{ error }}
-        </div>
-      </registration-form>
-    </ion-content>
+	    <ion-navbar>
+	      <ion-title>Register</ion-title>
+	    </ion-navbar>
+  	</ion-header>
+	  <ion-content>
+	    <auth-form>
+	      <button ion-button type="submit">
+	        Sign up
+	      </button>
+				<div class="error" *ngIf="error">
+					{{ error }}
+				</div>
+			</auth-form>
+		</ion-content>
     `
 })
 export class RegisterPage {

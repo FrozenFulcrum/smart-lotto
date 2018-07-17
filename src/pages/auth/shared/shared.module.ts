@@ -3,22 +3,19 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import {  IonicModule } from 'ionic-angular';
 
-import { LoginFormComponent } from './components/login-form/login-form.component'
-import { RegistrationFormComponent } from './components/registration-form/registration-form.component';
+import { AuthFormComponent } from './components/auth-form/auth-form.component';
 
 
 @NgModule({
     declarations: [
-        LoginFormComponent,
-        RegistrationFormComponent
+        AuthFormComponent
     ],
     imports: [
         IonicModule,
         ReactiveFormsModule
     ],
     exports: [
-        LoginFormComponent,
-        RegistrationFormComponent
+        AuthFormComponent
     ]
 })
 export class SharedModule {

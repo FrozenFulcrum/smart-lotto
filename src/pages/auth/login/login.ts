@@ -6,14 +6,20 @@ import { IonicPage } from 'ionic-angular/umd';
     selector: 'login-page',
     template: `
     <ion-header>
-      <ion-navbar>
-        <ion-title>Login</ion-title>
-      </ion-navbar>
-    </ion-header>
-
-    <ion-content>
-      <login-form></login-form>
-    </ion-content>
+	    <ion-navbar>
+	      <ion-title>Login</ion-title>
+	    </ion-navbar>
+  	</ion-header>
+	  <ion-content>
+	    <auth-form>
+	      <button ion-button type="submit">
+	        Sign in
+	      </button>
+				<div class="error" *ngIf="error">
+					{{ error }}
+				</div>
+			</auth-form>
+		</ion-content>
     `
 })
 export class LoginPage {
