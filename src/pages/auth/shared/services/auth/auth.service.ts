@@ -33,6 +33,6 @@ export class AuthService {
     }
 
     isAuthenticated() {
-        return true;
+        return this.af.auth.currentUser !== undefined;
     }
 }

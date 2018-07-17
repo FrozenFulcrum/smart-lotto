@@ -22,6 +22,8 @@ export class TabsPage {
   ) {}
 
   ionViewCanEnter() {
-    this.navCtrl.push('LoginPage');
+    if (!this.authService.isAuthenticated()) {
+      this.navCtrl.push('LoginPage');
+    }
   }
 }
