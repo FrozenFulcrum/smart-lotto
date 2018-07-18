@@ -10,18 +10,18 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 					<label>
 						Email
 						<input
-							formControlName="email" 
+							formControlName="email"
 							type="email">
 					</label>
 					<label>
 						Password
 						<input
-							formControlName="password" 
+							formControlName="password"
 							type="password">
 					</label>
 				</div>
 				<ng-content select="button"></ng-content>
-				<ng-content select="p"></ng-content>
+				<ng-content></ng-content>
 			</form>
 		</div>
     `

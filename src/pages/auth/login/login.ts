@@ -22,18 +22,26 @@ import { AuthService } from '../shared/services/auth/auth.service';
 				<div class="error" *ngIf="error">
 					{{ error }}
         </div>
-        <p>Sign up for an account</p>
+        <button ion-button
+          clear block
+          (click)="onSignup()">Sign up for an account</button>
 			</auth-form>
 		</ion-content>
     `
 })
 export class LoginPage {
 
+  error = '';
+
 	constructor(private authService: AuthService,
 		public navCtrl: NavController
-	){}
+  ){}
 
 	onLogin(event) {
 		console.log('Login ', event);
-	}
+  }
+
+  onSignup() {
+    this.navCtrl.push('RegisterPage');
+  }
 }

@@ -6,7 +6,7 @@ import { IonicPage, NavController } from 'ionic-angular';
 @Component({
   selector: 'tabs-page',
   template: `
-    <h3>CURRENT : {{ current }}</h3>
+    <h3>CURRENT : {{ current | json }}</h3>
   `
 })
 export class TabsPage {
@@ -25,5 +25,9 @@ export class TabsPage {
     if (!this.authService.isAuthenticated()) {
       this.navCtrl.push('LoginPage');
     }
+  }
+
+  ionViewWillEnter() {
+    this.current = this.authService.user;
   }
 }
