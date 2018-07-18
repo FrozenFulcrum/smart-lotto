@@ -3,14 +3,18 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'pool-manager-component',
 		template: `
-		<h4>Pool Manager Component</h4>
-		<div class='poolname'>Pool Name: Pool 1</div>
-		<div class='poolManager'>Pool Manager: Some Guy</div>
+			<ion-header>
+				<ion-navbar>
+					<ion-title>Memberships</ion-title>
+				</ion-navbar>
+			</ion-header>
+			
+			<ion-content padding>
+					<h6>Lotto Pool Participations</h6>
+			</ion-content>
     `
 })
 export class PoolManagerComponent {
 
 	constructor() {}
-
-
 }
