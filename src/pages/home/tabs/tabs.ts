@@ -1,19 +1,19 @@
 import { AuthService } from './../../auth/shared/services/auth/auth.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
+import { ResultsComponent } from '../shared/components/results/results.component';
+import { PoolManagerComponent } from '../shared/components/pool-manager/pool-manager.component';
 
 @IonicPage()
 @Component({
   selector: 'tabs-page',
-  template: `
-    <h3>CURRENT : {{ current | json }}</h3>
-  `
+  templateUrl:'tabs.html'
 })
 export class TabsPage {
 
-  // tab1Root = HomePage;
-  // tab2Root = ManageLottoPage;
-  // tab3Root = ContactPage;
+  tab1Root = ResultsComponent;
+  tab2Root = PoolManagerComponent;
+  //tab3Root = ContactPage;
   current: any;
 
   constructor(
@@ -22,9 +22,9 @@ export class TabsPage {
   ) {}
 
   ionViewCanEnter() {
-    if (!this.authService.isAuthenticated()) {
-      this.navCtrl.push('LoginPage');
-    }
+    //if (!this.authService.isAuthenticated()) {
+      //this.navCtrl.push('LoginPage');
+    //}
   }
 
   ionViewWillEnter() {

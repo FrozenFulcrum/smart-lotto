@@ -10,8 +10,13 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 // import { AngularFireAuth } from 'angularfire2/auth';
 
+import { ResultsComponent } from '../pages/home/shared/components/results/results.component';
+import { PoolManagerComponent } from '../pages/home/shared/components/pool-manager/pool-manager.component';
+
 import { MyApp } from './app.component';
 import { SharedModule } from '../pages/auth/shared/shared.module';
+import * as components from '../pages/home/shared/shared.module';
+
 var firebaseConfig = {
 	apiKey: "AIzaSyDWXYQHbfudm2-Mv_w3fPx8wCROdVgvTtg",
 	authDomain: "prototype-login-31a21.firebaseapp.com",
@@ -23,7 +28,7 @@ var firebaseConfig = {
 
 @NgModule({
   declarations: [
-    MyApp,
+    MyApp
   ],
   imports: [
     HttpModule,
@@ -32,11 +37,14 @@ var firebaseConfig = {
     IonicModule.forRoot(MyApp),
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(firebaseConfig),              
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    components.SharedModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    ResultsComponent,
+    PoolManagerComponent
   ],
   providers: [
     StatusBar,
