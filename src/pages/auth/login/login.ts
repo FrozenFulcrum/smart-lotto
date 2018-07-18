@@ -31,8 +31,8 @@ import { AuthService } from '../shared/services/auth/auth.service';
 })
 export class LoginPage {
 
-  error = '';
-
+	error = '';
+	
 	constructor(private authService: AuthService,
 		public navCtrl: NavController
   ){}

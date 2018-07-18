@@ -39,8 +39,12 @@ export class RegisterPage {
 
 	async onRegister(event) {
     const { email, password } = event.value;
-    await this.authService.createUser(email, password);
-    this.navCtrl.setRoot('TabsPage');
+    try {
+			await this.authService.createUser(email, password);
+    	this.navCtrl.setRoot('TabsPage');
+		} catch (err) {
+			this.error = err.message;
+		}
   }
 
   onLogin() {

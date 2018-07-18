@@ -47,4 +47,14 @@
   p {
     text-align: center;
   }
+  .error {
+    color: #a94442;
+    background: #f2dede;
+    border: 1px solid #e4b3b3;
+    border-radius: 2px;
+    padding: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 10px 0 0;
+  }
 }

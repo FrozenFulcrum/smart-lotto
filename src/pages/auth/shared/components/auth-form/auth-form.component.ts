@@ -22,6 +22,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 				</div>
 				<ng-content select="button"></ng-content>
 				<ng-content></ng-content>
+
 			</form>
 		</div>
     `
