@@ -3,15 +3,29 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'results-component',
         template: `
-        <ion-header>
+        <!--<ion-header>
           <ion-navbar>
-            <ion-title>Results</ion-title>
+            <ion-title></ion-title>
           </ion-navbar>
         </ion-header>
-        
+        -->
         <ion-content padding>
-            <h4>Lotto Max Winning Numbers: 9 20 47 1 32 58 90</h4>
-            <h4>649 Winning Numbers: 1 2 3 4 5 6</h4>
+            <ion-card>
+                <ion-card-header>
+                    Lotto Max
+                </ion-card-header>
+                <ion-card-content>
+                    Lotto Max Winning Numbers: 9 20 47 1 32 58 90
+                </ion-card-content>
+            </ion-card>
+            <ion-card>
+                <ion-card-header>
+                    649
+                </ion-card-header>
+                <ion-card-content>
+                    649 Winning Numbers: 1 2 3 4 5 6
+                </ion-card-content>
+            </ion-card>
         </ion-content>
     `
 })
