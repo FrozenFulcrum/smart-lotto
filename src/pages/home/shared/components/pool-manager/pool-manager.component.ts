@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { members } from '../../../../../models/members.model';
+import { contributions } from '../../../../../models/contributions.model';
+import { PoolManagerService } from '../../services/pool-manager/pool-manager.service';
+
 
 @Component({
     selector: 'pool-manager-component',
@@ -16,19 +21,32 @@ import { Component } from '@angular/core';
 						Lotto Pool Name Here
 					</ion-card-header>
 					<ion-card-content>
-						Lotto Pool Member 1
-						Lotto Pool Member 1	
+						<ion-list>
+							<ion-item *ngFor="let member of memberlist | async">{{members.emailAddress}}</ion-item>
+						</ion-list>
 					</ion-card-content>
 				</ion-card>
 
-				<button ion-fab top right>Static FAB</button>
 				<ion-fab bottom right>
-					<button ion-fab>Non static FAB</button>
+					<button ion-fab>
+						<ion-icon name="add"></ion-icon>
+					</button>
 				</ion-fab>
 			</ion-content>
     `
 })
 export class PoolManagerComponent {
 
-	constructor() {}
+	memberList: Observable<members[]>;
+
+	constructor(private poolManagerService: PoolManagerService) {
+		//this.memberList = this.poolManagerService.getMembersList()
+		//.snapshotChanges()
+		//.map(
+		//	changes => {
+		//		return changes.map(c => ({
+		//			key: c.payload.key, ...c.payload.val()
+		//		}))
+		//	});
+	}
 }

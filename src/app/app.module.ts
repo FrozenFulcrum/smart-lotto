@@ -15,6 +15,7 @@ import { PoolManagerComponent } from '../pages/home/shared/components/pool-manag
 
 import { MyApp } from './app.component';
 import { SharedModule } from '../pages/auth/shared/shared.module';
+import * as homeShared from '../pages/home/shared/shared.module';
 import * as components from '../pages/home/shared/shared.module';
 
 var firebaseConfig = {
@@ -34,6 +35,7 @@ var firebaseConfig = {
     HttpModule,
     BrowserModule,
     SharedModule.forRoot(),
+    homeShared.SharedModule.forRoot(),
     IonicModule.forRoot(MyApp),
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(firebaseConfig),              

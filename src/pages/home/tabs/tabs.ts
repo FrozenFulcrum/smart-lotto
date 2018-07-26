@@ -1,4 +1,4 @@
-import { AuthService } from './../../auth/shared/services/auth/auth.service';
+import { AuthService } from '../../auth/shared/services/auth/auth.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 import { ResultsComponent } from '../shared/components/results/results.component';
